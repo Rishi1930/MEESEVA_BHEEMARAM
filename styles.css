@@ -116,7 +116,7 @@ body {
 /* Grid */
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(2,1fr);
   gap: 15px;
 }
 
@@ -173,7 +173,7 @@ footer {
   }
 
   .service-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .hero h1 {
@@ -220,10 +220,11 @@ footer {
 }
 
 .map-container iframe {
-  width: 50%;
-  height: 300px;
+  width: 100%;
+  max-width: 500px;
+  height: 250px;
   border: 0px;
-  border-radius: 12px;
+  border-radius: 16px;
 }
 
 /* Modal */
