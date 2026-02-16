@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MeeSeva Bheemaram</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Top Strip -->
+  <div class="top-strip">
+    MeeSeva Service Centre | Working Hours: 9:00 AM – 9:00 PM
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+  <img src="logo.png" alt="MeeSeva Logo">
+  <span>MeeSeva Bheemaram</span>
+</div>
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <button onclick="openModal()" class="contact-btn">Contact</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to MeeSeva Portal</h1>
+    <p>"MeeSeva" in Telugu means, 'At your service', i.e. service to citizens. It is a good governance initiative that 
+    ncorporates the vision of National eGov Plan "Public Services Closer to Home" and facilitates single entry portal for entire range of G2C& G2B services.</p>
+  </section>
+
+  <!-- Services Section -->
+<section class="services">
+    <h2>Our Services</h2>
+  <p class="services-note">
+    All services related to these departments are available. Fast, secure and reliable assistance for citizens.
+  </p>
+  <div class="services-header">
+    <h2>Citizen Services</h2>
+    <a href="#" class="search-text">🔍 Search for Service</a>
+  </div>
+
+  <div class="service-grid-home">
+
+    <div class="tile red">RTA</div>
+    <div class="tile green">GHMC</div>
+    <div class="tile blue">TGSPDCL</div>
+    <div class="tile yellow">Police</div>
+
+    <div class="tile purple">Registration</div>
+    <div class="tile cyan">Revenue</div>
+    <div class="tile lightgreen">Twallet</div>
+    <div class="tile red2">HMWSSB</div>
+
+    <div class="tile blue2">Endowment</div>
+    <div class="tile orange">Other Payments</div>
+    <div class="tile lavender">Agriculture</div>
+    <div class="tile sky">CDMA</div>
+    <div class="tile lavender">ITE & C</div>
+    <div class="tile lightgreen">GHMC</div>
+
+  </div>
+
+  <div class="view-all-wrapper">
+    <a href="all-services.html" class="view-all-btn">View All Services</a>
+  </div>
+
+</section>
+  <!-- Centre Info -->
+  <section class="info">
+    <h2>Centre Information</h2>
+    <p><strong>Address:</strong> Bheemaram, Hanamkonda, Telangana</p>
+    <p><strong>Contact:</strong> +91 90142 38143</p>
+    <p><strong>Email:</strong> meesevabheemaram@gmail.com</p>
+  </section>
+<div class="contact-middle">
+  <button class="contact-middle-btn" onclick="openModal()">Contact Us</button>
+</div>
+  </section>
+
+<!-- Map Section -->
+<section class="map-section">
+  <h2 style="text-align:center; color:#002e5b; margin-bottom:20px;">Find Us</h2>
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps?q=Bheemaram%20Hanamkonda%20Telangana&output=embed"
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<!-- Centre Info -->
+<section class="info">
+
+  <!-- Footer -->
+  <footer>
+    © 2026 MeeSeva Bheemaram | All Rights Reserved
+  </footer>
+
+  <!-- Contact Modal -->
+<div class="modal" id="contactModal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">×</span>
+    <h2>Contact Us</h2>
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="text" id="phone" placeholder="Phone Number">
+    <input type="text" id="area" placeholder="Your Area/City">
+    <textarea id="message" placeholder="How can we help you?"></textarea>
+    <button onclick="sendWhatsApp()">Send via WhatsApp</button>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById("contactModal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("contactModal").style.display = "none";
+}
+
+function sendWhatsApp() {
+  var name = document.getElementById("name").value;
+  var phone = document.getElementById("phone").value;
+  var area = document.getElementById("area").value;
+  var message = document.getElementById("message").value;
+
+  var text = 
+    "Name: " + name + "%0A" +
+    "Phone: " + phone + "%0A" +
+    "Area: " + area + "%0A" +
+    "Message: " + message;
+
+  window.open("https://wa.me/919014238143?text=" + text, "_blank");
+}
+</script>
+
+</body>
+</html>
