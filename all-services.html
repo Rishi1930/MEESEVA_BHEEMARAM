@@ -14,53 +14,66 @@
     <h2>All Departments</h2>
   </div>
 
-  <div class="service-grid-all">
+ <div class="service-grid-all">
 
-    <div class="service-card">AADHAAR</div>
-    <div class="service-card">ACT</div>
-    <div class="service-card">BC WELFARE</div>
-    <div class="service-card">BHU BHARATI</div>
-    <div class="service-card">BOILERS</div>
-    <div class="service-card">CDMA</div>
-    <div class="service-card">CIVIL SUPPLIES</div>
-    <div class="service-card">ENDOWMENT</div>
-    <div class="service-card">FACTORIES</div>
-    <div class="service-card">GAD</div>
-    <div class="service-card">GHMC</div>
-    <div class="service-card">HEALTH CARE</div>
-    <div class="service-card">HMWSSB</div>
-    <div class="service-card">ITE&C</div>
-    <div class="service-card">LABOUR</div>
-    <div class="service-card">LEGAL METROLOGY</div>
-    <div class="service-card">POLICE</div>
-    <div class="service-card">REGISTRATION & STAMPS</div>
-    <div class="service-card">REVENUE</div>
-    <div class="service-card">RTA</div>
-    <div class="service-card">SCHOOL EDUCATION</div>
-    <div class="service-card">SERP</div>
-    <div class="service-card">SOCIAL WELFARE</div>
-    <div class="service-card">SSC</div>
-    <div class="service-card">TAPP</div>
-    <div class="service-card">TGNPDCL</div>
-    <div class="service-card">TGPRRE</div>
-    <div class="service-card">TGSPDCL</div>
-    <div class="service-card">TREASURY</div>
-    <div class="service-card">TSCHE</div>
-    <div class="service-card">TSDDCF</div>
-    <div class="service-card">TSHB</div>
-    <div class="service-card">TSNPDCL</div>
-    <div class="service-card">TSPRE</div>
-    <div class="service-card">TWALLET</div>
-    <div class="service-card">WMC</div>
-    <div class="service-card">WUMT</div>
+<a href="department.html?dept=AADHAR" class="service-card">AADHAAR</a>
+<a href="department.html?dept=bcwelfare" class="service-card">BC WELFARE</a>
+<a href="department.html?dept=bhu" class="service-card">BHU BHARATI</a>
+<a href="department.html?dept=boiler" class="service-card">BOILERS</a>
+<a href="department.html?dept=cmda" class="service-card">CMDA</a>
+<a href="department.html?dept=civil" class="service-card">CIVIL SUPPLIES</a>
+<a href="department.html?dept=pooja" class="service-card">ENDOWMENT</a>
+<a href="department.html?dept=factories" class="service-card">FACTORIES</a>
+<a href="department.html?dept=gad" class="service-card">GAD</a>
+<a href="department.html?dept=ghmc" class="service-card">GHMC</a>
+<a href="department.html?dept=health" class="service-card">HEALTH CARE</a>
+<a href="department.html?dept=hmwssb" class="service-card">HMWSSB</a>
+<a href="department.html?dept=itec" class="service-card">ITE&C</a>
+<a href="department.html?dept=labour" class="service-card">LABOUR</a>
+<a href="department.html?dept=legal" class="service-card">LEGAL METROLOGY</a>
+<a href="department.html?dept=challan" class="service-card">CHALLAN</a>
+<a href="department.html?dept=register" class="service-card">REGISTRATION & STAMPS</a>
+<a href="department.html?dept=revenue" class="service-card">REVENUE</a>
+<a href="department.html?dept=rta" class="service-card">RTA</a>
+<a href="department.html?dept=school" class="service-card">SCHOOL EDUCATION</a>
+<a href="department.html?dept=serp" class="service-card">SERP</a>
+<a href="department.html?dept=social" class="service-card">SOCIAL WELFARE</a>
+<a href="department.html?dept=ssc" class="service-card">SSC</a>
+<a href="department.html?dept=tgnpdcl" class="service-card">TGNPDCL</a>
+<a href="department.html?dept=tgspdcl" class="service-card">TGSPDCL</a>
+<a href="department.html?dept=tgprre" class="service-card">TGPRRE</a>
+<a href="department.html?dept=tresury" class="service-card">TREASURY</a>
+<a href="department.html?dept=tsche" class="service-card">TSCHE</a>
+<a href="department.html?dept=tsddcf" class="service-card">TSDDCF</a>
+<a href="department.html?dept=tshb" class="service-card">TSHB</a>
+<a href="department.html?dept=twallet" class="service-card">TWALLET</a>
+<a href="department.html?dept=wms" class="service-card">WMC</a>
+<a href="department.html?dept=wumt" class="service-card">WUMT</a>
 
-  </div>
+</div>
 
   <div class="view-all-wrapper">
     <a href="index.html" class="view-all-btn">← Go Back</a>
   </div>
 
 </section>
+
+<div id="topPopup" class="top-popup">
+  Please select your required department from the below list.
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get("fromHome") === "true") {
+    const popup = document.getElementById("topPopup");
+    popup.style.display = "block";
+
+    setTimeout(() => {
+      popup.style.display = "none";
+    }, 5000);
+  }
+</script>
 
 </body>
 </html>
